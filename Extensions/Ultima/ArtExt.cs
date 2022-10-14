@@ -63,8 +63,8 @@ namespace Ultima
 		{
 			patched = false;
 
-			if (checkMaxID)
-				index &= TileData.MaxItemValue;
+			// if (checkMaxID)
+				// index &= TileData.MaxItemValue;
 
 			return GetStatic(index);
 		}
