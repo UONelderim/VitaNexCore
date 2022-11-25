@@ -442,11 +442,7 @@ namespace VitaNex.Text
 
 	public sealed class UOFont
 	{
-#if MONO
-		public const PF PixelFormat = PF.Format32bppArgb;
-#else
 		public const PF PixelFormat = PF.Format16bppArgb1555;
-#endif
 
 		public static Size DefaultCharSize = new Size(8, 10);
 

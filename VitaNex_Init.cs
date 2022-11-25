@@ -144,14 +144,12 @@ namespace VitaNex
 				return root;
 			}
 
-#if !MONO
 			// Convert absolute path to relative path
 
 			var corePath = IOUtility.GetSafeDirectoryPath(Core.BaseDirectory);
 			var rootPath = IOUtility.GetSafeDirectoryPath(root.FullName.Replace(corePath, String.Empty));
 
 			root = new DirectoryInfo(rootPath);
-#endif
 
 			return root;
 		}

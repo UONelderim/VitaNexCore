@@ -61,12 +61,7 @@ namespace System
 			return String.Join("\n", desc);
 		}
 
-		public static TEnum Normalize<TEnum>(this Enum e)
-#if MONO || RunUO
-			where TEnum : struct, IComparable, IFormattable, IConvertible
-#else
-			where TEnum : struct, Enum
-#endif
+		public static TEnum Normalize<TEnum>(this Enum e) where TEnum : struct, Enum
 		{
 			var type = typeof(TEnum);
 			var flag = default(TEnum);
