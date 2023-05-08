@@ -20,7 +20,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
-
+using Nelderim.Configuration;
 using Server;
 using Server.Network;
 
@@ -196,11 +196,17 @@ namespace VitaNex.Network
 
 					if (headerOnly)
 					{
-						mob.AddNameProperties(opl);
+						if (NConfig.NameSystemEnabled)
+							mob.NAddNameProperties(opl, v);
+						else
+							mob.AddNameProperties(opl);
 					}
 					else
 					{
-						mob.GetProperties(opl);
+						if (NConfig.NameSystemEnabled)
+							mob.NGetProperties(opl, v);
+						else
+							mob.GetProperties(opl);
 					}
 
 					mob.EndAction(_OPLLock);
