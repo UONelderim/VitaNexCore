@@ -209,7 +209,7 @@ namespace VitaNex
 				return;
 			}
 
-			DisplayRetroBoot();
+			// DisplayRetroBoot();
 
 			CommandUtility.Register("VNC", AccessLevel.Administrator, OnCoreCommand);
 
