@@ -983,7 +983,6 @@ namespace VitaNex.Mobiles
 			if (!CheckVendorAccess(buyer))
 			{
 				Say("I can't serve you! Company policy.");
-				//Say(501522); // I shall not treat with scum like thee!
 				return false;
 			}
 
@@ -1360,7 +1359,6 @@ namespace VitaNex.Mobiles
 			if (!CheckVendorAccess(seller))
 			{
 				Say("I can't serve you! Company policy.");
-				//Say(501522); // I shall not treat with scum like thee!
 				return false;
 			}
 
